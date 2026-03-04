@@ -1,0 +1,59 @@
+body{
+margin:0;
+background:#000;
+color:white;
+font-family:Georgia,serif;
+}
+
+.topbar{
+text-align:center;
+padding:15px;
+border-bottom:1px solid gold;
+}
+
+.topbar h1{
+color:gold;
+letter-spacing:5px;
+}
+
+.page{display:none;padding:15px;}
+.page.active{display:block;}
+
+.gold-btn{
+background:gold;
+border:none;
+padding:10px 15px;
+border-radius:12px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.bottom-nav{
+position:fixed;
+bottom:0;
+width:100%;
+display:flex;
+justify-content:space-around;
+background:black;
+border-top:1px solid #333;
+}
+
+.bottom-nav button{
+flex:1;
+padding:12px;
+background:none;
+border:none;
+color:#777;
+}
+
+.bottom-nav button.active{
+color:gold;
+}
+
+.card{
+background:#111;
+padding:12px;
+margin-top:10px;
+border:1px solid gold;
+border-radius:12px;
+}
