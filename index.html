@@ -1,44 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SAINIWALAA</title>
-<link rel="stylesheet" href="style.css">
-<script type="module" src="app.js" defer></script>
+  <title>Sainiwalaa Creator Hub</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header class="topbar">
-<h1>SAINIWALAA</h1>
+<header>
+  <h1>SAINIWALAA</h1>
+  <button onclick="logout()">Logout</button>
 </header>
 
-<main>
+<div id="auth">
+  <h2>Login / Register</h2>
+  <input type="email" id="email" placeholder="Email">
+  <input type="password" id="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+  <button onclick="register()">Register</button>
+</div>
 
-<section id="darbar" class="page active">
-<h2>🚩 Darbar</h2>
-<button id="postBtn" class="gold-btn">+ Naya Post</button>
-<div id="feed"></div>
-</section>
+<div id="app" style="display:none;">
 
-<section id="bazaar" class="page">
-<h2>🛍 Bazaar</h2>
-<div id="productList"></div>
-</section>
+  <h2>Create Post</h2>
+  <input type="text" id="postText" placeholder="Write caption">
+  <input type="text" id="postImage" placeholder="Image URL">
+  <button onclick="addPost()">Post</button>
 
-<section id="profile" class="page">
-<h2>👤 Aap</h2>
-<div id="profileData"></div>
-</section>
+  <h2>Add Product</h2>
+  <input type="text" id="productName" placeholder="Product Name">
+  <input type="number" id="productPrice" placeholder="Price">
+  <button onclick="addProduct()">Add Product</button>
 
-</main>
+  <h2>Feed</h2>
+  <div id="posts"></div>
 
-<nav class="bottom-nav">
-<button data-page="darbar">Darbar</button>
-<button data-page="bazaar">Bazaar</button>
-<button data-page="profile">Aap</button>
-</nav>
+</div>
 
+<script type="module" src="app.js"></script>
 </body>
 </html>
